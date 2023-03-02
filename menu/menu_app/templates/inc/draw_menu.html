@@ -1,0 +1,10 @@
+{% for parent in parents %}
+<ul>
+    <li><a href="{% url 'menu' parent.pk %}">{{ parent.name }}</a></li>
+{% endfor %}
+    <ul>
+        {% for item in menu_items %}
+            <li><a href="{% url 'menu' item.pk%}">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
+</ul>
